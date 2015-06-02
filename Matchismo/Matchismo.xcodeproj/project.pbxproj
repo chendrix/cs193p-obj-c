@@ -15,6 +15,7 @@
 		AEB08D721B1E4EF50076A012 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEB08D701B1E4EF50076A012 /* LaunchScreen.xib */; };
 		AEB08D7E1B1E4EF50076A012 /* MatchismoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB08D7D1B1E4EF50076A012 /* MatchismoTests.m */; };
 		AEB08D8A1B1E5B5F0076A012 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB08D891B1E5B5F0076A012 /* Card.m */; };
+		AEB08D8D1B1E5D720076A012 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB08D8C1B1E5D720076A012 /* Deck.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		AEB08D7D1B1E4EF50076A012 /* MatchismoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MatchismoTests.m; sourceTree = "<group>"; };
 		AEB08D881B1E5B5E0076A012 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
 		AEB08D891B1E5B5F0076A012 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
+		AEB08D8B1B1E5D720076A012 /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Deck.h; sourceTree = "<group>"; };
+		AEB08D8C1B1E5D720076A012 /* Deck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Deck.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +131,8 @@
 			children = (
 				AEB08D881B1E5B5E0076A012 /* Card.h */,
 				AEB08D891B1E5B5F0076A012 /* Card.m */,
+				AEB08D8B1B1E5D720076A012 /* Deck.h */,
+				AEB08D8C1B1E5D720076A012 /* Deck.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -232,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEB08D8D1B1E5D720076A012 /* Deck.m in Sources */,
 				AEB08D6A1B1E4EF50076A012 /* ViewController.m in Sources */,
 				AEB08D671B1E4EF50076A012 /* AppDelegate.m in Sources */,
 				AEB08D641B1E4EF50076A012 /* main.m in Sources */,

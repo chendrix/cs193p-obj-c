@@ -69,4 +69,9 @@
     return _contents;
 }
 
+- (BOOL)isRedCard
+{
+    return [@[@"♥︎", @"♦︎"] containsObject:self.suit];
+}
+
 @end

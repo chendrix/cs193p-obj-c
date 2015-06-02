@@ -36,12 +36,24 @@
 - (IBAction)touchCardButton:(UIButton *)sender {
     UIImage *cardImage;
     NSString *cardTitle;
+    
     if ([sender.currentTitle length]) {
         cardImage = [UIImage imageNamed:@"card-back"];
         cardTitle = @"";
     } else {
+        UIColor *color;
         cardImage = [UIImage imageNamed:@"card-front"];
-        cardTitle = [self.deck drawRandomCard].contents;
+        
+        PlayingCard *card = [self.deck drawRandomCard];
+        cardTitle = card.contents;
+        
+        if ([card isRedCard]) {
+            color = [UIColor redColor];
+        } else {
+            color = [UIColor blackColor];
+        }
+        [sender setTitleColor:color forState:UIControlStateNormal];
+        
     }
     
     [sender setBackgroundImage:cardImage

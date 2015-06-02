@@ -10,14 +10,9 @@
 
 @interface Card : NSObject
 
-@property (strong, nonatomic, readonly) NSString *contents;
-
 @property (nonatomic, getter=isChosen) BOOL chosen;
 @property (nonatomic, getter=isMatched) BOOL matched;
-
-+ (instancetype)new NS_UNAVAILABLE;
-- (instancetype)init NS_UNAVAILABLE;
-- (instancetype)initWithContents:(NSString *)contents NS_DESIGNATED_INITIALIZER;
+@property (nonatomic, readonly) NSString *contents;
 
 - (int)match:(NSArray *)otherCards;
 

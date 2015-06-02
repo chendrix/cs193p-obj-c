@@ -16,15 +16,6 @@
 
 @implementation Card
 
-- (instancetype)initWithContents:(NSString *)contents
-{
-    self = [super init];
-    if (self) {
-        self.contents = contents;
-    }
-    return self;
-}
-
 - (int)match:(NSArray *)otherCards
 {
     int score = 0;

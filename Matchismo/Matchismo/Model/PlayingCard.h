@@ -13,6 +13,8 @@
 @property (nonatomic, strong, readonly) NSString *suit;
 @property (nonatomic, readonly) NSNumber *rank;
 
++ (instancetype)new NS_UNAVAILABLE;
+- (instancetype)init NS_UNAVAILABLE;
 - (instancetype)initWithSuit:(NSString *)suit rank:(NSNumber *)rank;
 
 + (NSArray *)validSuits;

@@ -63,4 +63,22 @@
     return contents;
 }
 
+- (int)match:(NSArray *)otherCards
+{
+    int score = 0;
+    
+    for (PlayingCard *card in otherCards) {
+        if ([card.suit isEqualToString:self.suit]) {
+            score += 1;
+        }
+        
+        if (card.rank == self.rank) {
+            score += 4;
+        }
+    }
+    
+    return score;
+
+}
+
 @end

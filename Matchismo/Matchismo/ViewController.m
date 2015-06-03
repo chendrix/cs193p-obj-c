@@ -8,13 +8,12 @@
 
 #import "ViewController.h"
 #import "PlayingCardDeck.h"
-#import "PlayingCard.h"
 
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
 @property (nonatomic) int flipCount;
-@property (nonatomic) PlayingCardDeck *deck;
+@property (nonatomic) Deck *deck;
 
 @end
 
@@ -24,7 +23,12 @@
 - (void)viewDidLoad
 {
     self.flipCount = 0;
-    self.deck = [[PlayingCardDeck alloc] init];
+    self.deck = [self createDeck];
+}
+
+- (Deck *)createDeck
+{
+    return [[PlayingCardDeck alloc] init];
 }
 
 - (void)setFlipCount:(int)flipCount
@@ -40,28 +44,28 @@
     if ([sender.currentTitle length]) {
         cardImage = [UIImage imageNamed:@"card-back"];
         cardTitle = @"";
+        
+        [sender setBackgroundImage:cardImage
+                          forState:UIControlStateNormal];
+        [sender setTitle:cardTitle
+                forState:UIControlStateNormal];
     } else {
-        UIColor *color;
         cardImage = [UIImage imageNamed:@"card-front"];
         
-        PlayingCard *card = [self.deck drawRandomCard];
-        cardTitle = card.contents;
+        Card *card = [self.deck drawRandomCard];
         
-        if ([card isRedCard]) {
-            color = [UIColor redColor];
-        } else {
-            color = [UIColor blackColor];
+        if (card) {
+            cardTitle = card.contents;
+
+            [sender setBackgroundImage:cardImage
+                              forState:UIControlStateNormal];
+            [sender setTitle:cardTitle
+                    forState:UIControlStateNormal];
+            self.flipCount++;
         }
-        [sender setTitleColor:color forState:UIControlStateNormal];
-        
     }
     
-    [sender setBackgroundImage:cardImage
-                      forState:UIControlStateNormal];
-    [sender setTitle:cardTitle
-            forState:UIControlStateNormal];
     
-    self.flipCount++;
 }
 
 @end

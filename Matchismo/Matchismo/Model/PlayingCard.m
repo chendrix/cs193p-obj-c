@@ -12,7 +12,6 @@
 
 @property (nonatomic, strong, readwrite) NSString *suit;
 @property (nonatomic, readwrite) NSNumber *rank;
-@property (strong, nonatomic, readwrite) NSString *contents;
 
 @end
 
@@ -57,21 +56,11 @@
 
 - (NSString *)contents
 {
-    if (_contents) {
-        return _contents;
-    } else {
-        NSArray *rankStrings = [[self class] rankStrings];
-        NSInteger rankIndex = [self.rank integerValue];
-        NSString *contents = [rankStrings[rankIndex - 1] stringByAppendingString:self.suit];
-        _contents = contents;
-    }
-    
-    return _contents;
-}
-
-- (BOOL)isRedCard
-{
-    return [@[@"♥︎", @"♦︎"] containsObject:self.suit];
+    NSArray *rankStrings = [[self class] rankStrings];
+    NSInteger rankIndex = [self.rank integerValue];
+    NSString *contents = [rankStrings[rankIndex - 1] stringByAppendingString:self.suit];
+        
+    return contents;
 }
 
 @end

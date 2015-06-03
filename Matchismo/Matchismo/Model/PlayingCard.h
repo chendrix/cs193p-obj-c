@@ -14,7 +14,6 @@
 @property (nonatomic, readonly) NSNumber *rank;
 
 - (instancetype)initWithSuit:(NSString *)suit rank:(NSNumber *)rank;
-- (BOOL)isRedCard;
 
 + (NSArray *)validSuits;
 + (NSArray *)validRanks;

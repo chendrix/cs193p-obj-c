@@ -198,11 +198,22 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="loT-yf-tNW">
-                                <rect key="frame" x="66" y="400" width="280" height="21"/>
+                                <rect key="frame" x="66" y="400" width="280" height="33"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nFN-09-Dm2">
+                                <rect key="frame" x="66" y="472" width="280" height="33"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
+                                <state key="normal" title="RESET">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchResetButton" destination="vXZ-lx-hvc" eventType="touchUpInside" id="lFf-CL-17T"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="0.25098040699958801" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -210,13 +221,16 @@
                             <constraint firstItem="C8d-t3-Vbc" firstAttribute="leading" secondItem="eCi-gK-mkb" secondAttribute="trailing" constant="8" id="7T8-dO-kyn"/>
                             <constraint firstItem="o2I-Er-WXw" firstAttribute="centerX" secondItem="eCi-gK-mkb" secondAttribute="centerX" id="9QI-Oo-jtS"/>
                             <constraint firstItem="eCi-gK-mkb" firstAttribute="centerY" secondItem="EDN-ul-Aqr" secondAttribute="centerY" id="9RL-J4-afL"/>
+                            <constraint firstItem="loT-yf-tNW" firstAttribute="width" secondItem="nFN-09-Dm2" secondAttribute="width" id="HGx-zB-Ljd"/>
                             <constraint firstItem="vk4-hD-gM1" firstAttribute="centerX" secondItem="1US-nP-j01" secondAttribute="centerX" id="LO8-5Y-aiO"/>
                             <constraint firstItem="vk4-hD-gM1" firstAttribute="centerX" secondItem="DSD-Lv-Zmp" secondAttribute="centerX" id="MEK-lm-pwq"/>
                             <constraint firstItem="vk4-hD-gM1" firstAttribute="top" secondItem="1US-nP-j01" secondAttribute="bottom" constant="8" id="P5h-15-PcE"/>
                             <constraint firstItem="vk4-hD-gM1" firstAttribute="centerY" secondItem="yrx-Ph-JSY" secondAttribute="centerY" id="Q7D-M8-jeX"/>
                             <constraint firstItem="loT-yf-tNW" firstAttribute="top" secondItem="9PW-KS-CSF" secondAttribute="bottom" constant="26" id="QcY-Ds-4md"/>
                             <constraint firstItem="vk4-hD-gM1" firstAttribute="centerY" secondItem="CyD-x5-abw" secondAttribute="centerY" id="RJC-st-Mw0"/>
+                            <constraint firstItem="loT-yf-tNW" firstAttribute="centerX" secondItem="nFN-09-Dm2" secondAttribute="centerX" id="RiN-2e-VWl"/>
                             <constraint firstItem="1US-nP-j01" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="50" id="S2C-SL-tpn"/>
+                            <constraint firstItem="nFN-09-Dm2" firstAttribute="top" secondItem="loT-yf-tNW" secondAttribute="bottom" constant="39" id="Stf-Lj-pmX"/>
                             <constraint firstItem="DSD-Lv-Zmp" firstAttribute="leading" secondItem="loT-yf-tNW" secondAttribute="leading" id="WAY-FL-54O"/>
                             <constraint firstItem="1US-nP-j01" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="50" id="XBr-Hs-vsf"/>
                             <constraint firstItem="DSD-Lv-Zmp" firstAttribute="top" secondItem="vk4-hD-gM1" secondAttribute="bottom" constant="8" id="Xpm-bT-etZ"/>
@@ -231,6 +245,7 @@
                             <constraint firstItem="yrx-Ph-JSY" firstAttribute="centerX" secondItem="C8d-t3-Vbc" secondAttribute="centerX" id="m9O-KT-jjx"/>
                             <constraint firstItem="EDN-ul-Aqr" firstAttribute="centerX" secondItem="CyD-x5-abw" secondAttribute="centerX" id="nYU-sJ-FJI"/>
                             <constraint firstItem="yrx-Ph-JSY" firstAttribute="centerX" secondItem="JiB-Tc-CTr" secondAttribute="centerX" id="q9j-nx-ZR9"/>
+                            <constraint firstItem="loT-yf-tNW" firstAttribute="height" secondItem="nFN-09-Dm2" secondAttribute="height" id="u3i-Pr-iOa"/>
                             <constraint firstItem="EDN-ul-Aqr" firstAttribute="leading" secondItem="1US-nP-j01" secondAttribute="trailing" constant="8" id="vK6-Dg-6jv"/>
                             <constraint firstItem="o2I-Er-WXw" firstAttribute="centerX" secondItem="bkv-g7-dkf" secondAttribute="centerX" id="y8a-IQ-Iph"/>
                         </constraints>

@@ -25,8 +25,12 @@
 
 - (void)viewDidLoad
 {
+    [self resetGame];
+}
+
+- (void)resetGame
+{
     self.game = [[CardMatchingGame alloc] initWithCardCount:[self.cardButtons count] usingDeck:[self createDeck]];
-    
 }
 
 - (Deck *)createDeck
@@ -64,6 +68,11 @@
 - (UIImage *)backgroundImageForCard:(Card *)card
 {
     return [UIImage imageNamed:(card.isChosen) ? @"card-front" : @"card-back"];
+}
+
+- (IBAction)touchResetButton {
+    [self resetGame];
+    [self updateUI];
 }
 
 @end
